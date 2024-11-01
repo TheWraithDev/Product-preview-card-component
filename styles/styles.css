@@ -126,6 +126,9 @@ textarea:not([rows]) {
 
 body {
   background-color: var(--clr-cream-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -135,7 +138,7 @@ main {
   flex-direction: column;
 }
 
-.product_image_header {
+.product_image_header_mobile {
   border-radius: 5px;
 }
 
@@ -144,8 +147,8 @@ main {
   flex-direction: column;
   background-color: var(--clr-white);
   margin: 20px;
-  border: solid 1px black;
-  min-width: 23rem;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .card_content_container {
@@ -203,7 +206,7 @@ main {
 .add_to_cart {
   grid-column: 1 / -1;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   background-color: var(--clr-green);
   font-family: var(--ff-button);
   font-size: var(--fs-button);
@@ -223,4 +226,31 @@ main {
 .atc_logo {
   margin-right: 10px;
   text-align: center;
+}
+
+.product_image_header_desktop {
+  display: none;
+}
+
+@media screen and (min-width: 38rem) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 52.25rem;
+  }
+
+  .product_image_header_desktop {
+    display: block;
+    border-radius: 10px;
+  }
+  .product_image_header_mobile {
+    display: none;
+  }
+  .card_content_container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    row-gap: 40px;
+  }
 }
