@@ -138,6 +138,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 25px;
 }
 
 .product_image_header_mobile {
@@ -238,7 +239,7 @@ main {
 
 /*Desktop Design*/
 
-@media screen and (min-width: 38rem) {
+@media screen and (min-width: 40rem) {
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
