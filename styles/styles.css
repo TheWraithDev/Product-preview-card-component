@@ -124,6 +124,8 @@ textarea:not([rows]) {
   --fw-overline: 400; /*Medium*/
 }
 
+/* Put Main Card Container in the Center of the page*/
+/*Mobile first approach, all the CSS before the media query is for the mobile base design*/
 body {
   background-color: var(--clr-cream-background);
   display: flex;
@@ -154,6 +156,8 @@ main {
 .card_content_container {
   padding: 0 12px;
 }
+
+/*Fonts, Spacing and Typography*/
 
 .product_inline_description {
   font-family: var(--ff-overline);
@@ -232,6 +236,8 @@ main {
   display: none;
 }
 
+/*Desktop Design*/
+
 @media screen and (min-width: 38rem) {
   .card-container {
     display: grid;
@@ -243,14 +249,19 @@ main {
   .product_image_header_desktop {
     display: block;
     border-radius: 10px;
+    height: 100%; /*This ensures that the image grows with the parent container when switching designs */
   }
   .product_image_header_mobile {
-    display: none;
+    display: none; /*This is done to alternate the switching of the mobile picture vs desktop picture */
   }
   .card_content_container {
     display: flex;
     flex-direction: column;
     margin: 10px;
     row-gap: 40px;
+  }
+
+  .product_price_container {
+    gap: 75px;
   }
 }
